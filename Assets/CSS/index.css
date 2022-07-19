@@ -1,6 +1,6 @@
 #Body{
-    margin: 0px 0px;
-    padding: 0px 0px;
+    margin: 0;
+    padding: 0;
     position: relative;
     padding-bottom: 100px;
     min-height: 100vh;
@@ -50,10 +50,10 @@ nav { z-index: 3;}
 .BienvenidaCartas{
     background-color: rgba(135, 134, 134, 0.871);
     color: whitesmoke;
-    width: max-content;
-    height: auto;
+    width: auto;
+    height: fit-content;
     border-radius: 20px;
-    margin:50px 100px;
+    margin:2%;
     z-index: 3;
 
 }
@@ -61,10 +61,10 @@ nav { z-index: 3;}
     background-color: rgba(135, 134, 134, 0.871);
     color: whitesmoke;
     width: 50%;
-    height: 400px;
+    height: auto;
     border: solid 5px black;
     border-radius: 20px;
-    margin:5% 25%;
+    margin:3% 25%;
     z-index: 3;
 
 }

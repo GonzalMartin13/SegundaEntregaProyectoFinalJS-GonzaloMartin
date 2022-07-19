@@ -26,16 +26,30 @@ const lineasProductos = [ {
 ];
 
 const chango = [];
+const changuito = document.getElementById("chango");
+
 
 const botonCliente = document.getElementById("BotonCliente");
-const divCartas = document.getElementById("CartasProds");
-const changuito = document.getElementById("chango");
+guardarProdLS(lineasProductos);
+
+botonCliente.onclick = () => { 
+    let FondoBody = document.getElementById("Body");
+    FondoBody.className = "fondoBodyCliente container-fluid row justify-content-center";
+    let botonCarro = document.getElementById("BotonChango");
+    botonCarro.className = "btn btn-secondary";
+    const divCartas = document.getElementById("CartasProds");
+    divCartas.className = "BienvenidaCartas text-center row justify-content-center align-items-center";
+    divCartas.style = "border: black 5px solid";
+    let product = recuperarProdLS();
+
+    renderProds(product, divCartas)
+};
+
+
 
 
 
 const renderProds = (lineas, target) => {
-    divCartas.className = "BienvenidaCartas d-flex text-center justify-content-center align-items-center";
-    divCartas.style = "border: black 5px solid";
     
     let acumulador = '';
     lineas.map(producto => {
@@ -90,20 +104,27 @@ const handleClick = (event) => {
                 precio: code.precio,
                 imgURL: code.imgURL,
                 vendido: code.vendido, 
-                })
-            }
-        
-        renderChango (chango, changuito);
+                }
+            )   
+        }
+    renderChango (chango, changuito);
 }
 
 function guardarCarroSS(carro) {
-    sessionStorage.setItem("carrito de compras", JSON.stringify(carro));
+    sessionStorage.setItem("CarritoDeCompras", JSON.stringify(carro));
 }
 
-function recuperarCarroSS(carro) {
-    return JSON.parse(sessionStorage.getItem("carrito de compras")) || [];
+function recuperarCarroSS() {
+    return JSON.parse(sessionStorage.getItem("CarritoDeCompras")) || [];
 }
-botonCliente.onclick = () => { renderProds(lineasProductos, divCartas)};
+function guardarProdLS(lineas) {
+    localStorage.setItem("LineasDeProductos", JSON.stringify(lineas));
+}
+
+function recuperarProdLS() {
+    return JSON.parse(localStorage.getItem("LineasDeProductos")) || [];
+}
+
 
 
 
