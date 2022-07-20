@@ -73,8 +73,11 @@ nav { z-index: 3;}
 a{
     text-decoration: none;
     color: whitesmoke;
+    z-index: 3;
 }
 a:hover{color: whitesmoke;}
+
+.barraCarrito{width:110%;}
 
 /* agregar hover para los botone */
 
@@ -113,5 +116,5 @@ a:hover{color: whitesmoke;}
     color: red;
     transform: scale(1.1);
 }
-#BotonChango{ z-index:3;}
+#BotonChango{ width: 100%;}
 

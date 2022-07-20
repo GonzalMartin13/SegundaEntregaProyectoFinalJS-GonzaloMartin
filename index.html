@@ -12,7 +12,7 @@
 </head>
 <body class="fondoBodyIndex container-fluid row" id="Body">
     <div class="opaciti"></div>
-    <nav class="navbar bg-light">
+    <nav class="navbar bg-light" id="nav">
         <div class=" justify-content-around container" >
             <i class="fa-solid fa-couch"></i>
             <a class="navbar-brand" href="#Bienvenida"> La Tienda Del Mueble </a>
@@ -33,9 +33,9 @@
     
     
     <!-- Button trigger modal -->
-    <button ID="BotonChango" type="button" class="btn btn-secondary none"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <a href="#nav" class="barraCarrito"><button ID="BotonChango" type="button" class="btn btn-secondary none"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Ir al carrito
-    </button>
+    </button> </a>
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="color:whitesmoke;">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="boton btn-secondary" data-bs-dismiss="modal">Salir</button>
-                    <button type="button" class="boton btn-secondary">Pagar</button>
+                    <button id="pagarCarrito" type="button" class="boton btn-secondary">Pagar</button>
                 </div>
             </div>
         </div>
